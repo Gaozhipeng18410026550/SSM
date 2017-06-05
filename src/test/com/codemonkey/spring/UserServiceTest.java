@@ -1,5 +1,6 @@
 package com.codemonkey.spring;
 
+import com.codemonkey.user.entry.User;
 import com.codemonkey.user.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +28,6 @@ public class UserServiceTest {
 
     @Test
     public void testUserService(){
-        this.userService.users();
+        User user  = userService.getUser(1);
     }
 }

@@ -1,14 +1,16 @@
-package com.codemonkey.user.service;
+package com.codemonkey.user.dao;
 
 import com.codemonkey.user.entry.User;
+import org.springframework.stereotype.Repository;
 
 /**
- * Description: 用户服务接口
+ * Description:
  * User: gaozhipen
- * Date: 2017-05-05
- * Time: 17:15
+ * Date: 2017-06-04
+ * Time: 14:28
  */
-public interface UserService {
+@Repository
+public interface UserDao {
 
     public void addUser(User user);
 

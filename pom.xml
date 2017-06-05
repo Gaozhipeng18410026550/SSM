@@ -17,21 +17,17 @@
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
                 <version>1.3.5</version>
                 <configuration>
-                    <!-- generator 配置文件 -->
-                    <configurationFile>${basedir}/src/main/resources/generatorConfig.xml</configurationFile>
                     <!--允许移动生成的文件-->
                     <verbose>true</verbose>
-                    <!--允许生成的文件-->
-                    <overwrite>true</overwrite>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>Generate MyBatis Artifacts</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
             </plugin>
         </plugins>
         <!-- 解决生成的maaper.xml文件无法访问的问题 -->
@@ -83,7 +79,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
+            <version>5.1.38</version>
         </dependency>
 
 
